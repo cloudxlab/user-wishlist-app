@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    build: ./
+    environment:
+      - PYTHONBUFFERED=1
+    ports:
+      - "80:80"
+    links:
+      - redis
+      - db
+  redis:
+    image: redis:6.0.8
+    ports:
+      - "6379:6379"
+  db:
+    image: postgres:12-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hello_flask
+      - POSTGRES_PASSWORD=hello_flask
+      - POSTGRES_DB=hello_flask_dev
+    ports:
+      - "5432:5432"
+    
+volumes:
+  postgres_data:
+
