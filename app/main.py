@@ -19,7 +19,7 @@ from models import db, UserFavs
 
 db.init_app(app)
 with app.app_context():
-    # To create / use database mentioned in URI
+    # To creates database with all the models defined in models.py
     db.create_all()
     db.session.commit()
 
