@@ -17,7 +17,7 @@ deploy:
   env: Wishlistrediselasticache-env
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket_name: "awscache-rds-eb-bucket"
+  bucket_name: "awscache-rds-eb-bucket-cxl-nov27"
   bucket_path: "docker"
   on:
     branch: awscache-rds-eb
