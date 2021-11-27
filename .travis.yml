@@ -13,8 +13,8 @@ services:
 deploy:
   provider: elasticbeanstalk
   region: ap-south-1
-  app: wishlist-rds-elasticache
-  env: Wishlistrdselasticache-env
+  app: wishlist-redis-elasticache
+  env: Wishlistrediselasticache-env
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   bucket_name: "awscache-rds-eb-bucket"
